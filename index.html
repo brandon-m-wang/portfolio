@@ -30,30 +30,31 @@
                 <a href="#about" class="nav-link">ABOUT</a>
             </li>
             <li>
-                <a href="#skills" class="nav-link">SKILLS</a>
+                <a href="#services" class="nav-link">SKILLS</a>
             </li>
             <li>
-                <a href="#projects" class="nav-link">PROJECTS</a>
+                <a href="#portfolio" class="nav-link">PROJECTS</a>
             </li>
             <li>
                 <a href="#experience" class="nav-link">EXPERIENCE</a>
             </li>
             <li>
-                <a href="#contact" class="nav-link">CONTACT</a>
+                <a href="#others" class="nav-link">OTHER</a>
             </li>
         </ul>
     </nav>
     <div class="landing-text">
         <h1>BRANDON WANG</h1>
-        <h6>A hand-made portfolio website</h6>
+        <h6>Made with <i class="far fa-heart"></i> using jQuery/JS and AOS libraries <span
+                style="font-weight: 100">(fully responsive)</span></h6>
     </div>
 </header>
 <section class="about" id="about">
     <div class="container">
-        <div class="profile-img">
+        <div class="profile-img" data-aos="fade-right" data-aos-delay="150">
             <img src="resources/headshot.gif" alt="">
         </div>
-        <div class="about-details">
+        <div class="about-details" data-aos="fade-left" data-aos-delay="300">
             <div class="about-heading">
                 <h1>About</h1>
                 <h6>Myself</h6>
@@ -61,25 +62,42 @@
             <p>Howdy! I'm a first-year undergraduate student at UC Berkeley studying Computer Science and Economics. My
                 passion for full-stack development has led me down a journey of developmental self-teaching, and I
                 strive for fluidity in both design and implementation. I'm a self-proclaimed lo-fi producer, mogul
-                skier, k-drama aficionado, squid-lover, rythmist, low-key anime watcher, and Miata enthusiast. From
+                skier, k-drama aficionado, squid-lover, rythmist, Stokeley fanboy, and Miata enthusiast. From
                 <a href="https://www.yunmkt.com/" target="_blank" ) class="in-text-link">boba lamps</a> to
                 <a href="http://www.grassrootshousing.space/" target="_blank" ) class="in-text-link">interactive data
-                visualizations</a>, I love building for the sake of building. Let's connect.</p>
+                    visualizations</a>, I love building for the sake of building. Let's connect.</p>
             <div class="social-media">
                 <ul class="nav-list">
                     <li>
-                        <a href="#" class="icon-link">
+                        <a href="https://www.facebook.com/profile.php?id=100011469198706" target="_blank"
+                           class="icon-link">
                             <i class="fab fa-facebook"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="icon-link">
+                        <a href="https://www.linkedin.com/in/brandon-m-wang" target="_blank" class="icon-link">
                             <i class="fab fa-linkedin"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="icon-link">
+                        <a href="https://www.instagram.com/brandonwan.gg/" target="_blank" class="icon-link">
                             <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:brandonwang@calhacks.io" target="_blank" class="icon-link">
+                            <i class="fas fa-envelope-square"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/brandon-m-wang" target="_blank" class="icon-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://open.spotify.com/artist/4yd3Sjs98mo2coBsK1wpPN" target="_blank"
+                           class="icon-link">
+                            <i class="fab fa-spotify"></i>
                         </a>
                     </li>
                 </ul>
@@ -95,7 +113,7 @@
             <h6>My skills and technology stacks</h6>
         </div>
         <div class="my-skills">
-            <div class="skill">
+            <div class="skill" data-aos="fade-in" data-aos-delay="150">
                 <div class="icon-container">
                     <i class="fas fa-layer-group"></i>
                 </div>
@@ -103,7 +121,7 @@
                 <p><span class="proficiencies">Proficiencies></span> HTML5, CSS3, JavaScript, jQuery, AoS
                     <br><br><span class="familiar">Familiar></span> ReactJS, Bootstrap, SCSS, MaterialUI</p>
             </div>
-            <div class="skill">
+            <div class="skill" data-aos="fade-in" data-aos-delay="300">
                 <div class="icon-container">
                     <i class="fas fa-database"></i>
                 </div>
@@ -112,7 +130,7 @@
                     Regression Models
                     <br><br><span class="familiar">Familiar></span> Web Scraping, sklearn, BeautifulSoup</p>
             </div>
-            <div class="skill">
+            <div class="skill" data-aos="fade-in" data-aos-delay="450">
                 <div class="icon-container">
                     <i class="fas fa-server"></i>
                 </div>
@@ -121,7 +139,7 @@
                     Firebase (& Auth), Firestore, RESTful API
                     <br><br><span class="familiar">Familiar></span> Java, Node.js, Azure, AWS</p>
             </div>
-            <div class="skill">
+            <div class="skill" data-aos="fade-in" data-aos-delay="600">
                 <div class="icon-container">
                     <i class="fas fa-drafting-compass"></i>
                 </div>
@@ -138,77 +156,120 @@
     <div class="container">
         <div class="section-heading">
             <h1>Projects</h1>
-            <h6>Cool things :)</h6>
+            <h6>Collection of my recent projects and apps</h6>
         </div>
         <div class="portfolio-item">
-            <div class="portfolio-img">
+            <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="150">
                 <img src="resources/safeguardseattle.jpeg" alt="">
             </div>
-            <div class="portfolio-description">
+            <div class="portfolio-description" data-aos="fade-left" data-aos-delay="300">
                 <h6>sunhacks | ASU | Tempe, AZ</h6>
                 <h1>Safeguard Seattle</h1>
-                <p>Lorem ipsum dolor sit amet, conectetur adipisicing elit.
-                    Lorem ipsum dolor sit amet, conectetur adipisicing elit.</p>
-                <a href="#" class="cta">View repository</a>
+                <p>Protecting marginalized communities from hate crimes in Seattle through an interactive heat map.
+                    Safeguard Seattle is a tool meant to help marginalized communities avoid being victims of potential
+                    hate crimes. SGS uses up to date police reports to create an interactive heat map that tracks the
+                    location and frequency of hate crimes across Seattle. Users are able to
+                    filter incidents of hate crime by various identity categories. Depending on the user's chosen
+                    race/ethnicity, gender, sexuality, and religion, the heat map redistributes itself to display the
+                    frequency and location of incidents by the user's chosen criteria</p>
+                <div><h2><span>WINNER</span>Best DS/ML/AI Hack</h2>
+                    <h2><span>WINNER</span>Best Use of Google Cloud</h2></div>
+                <a href="https://github.com/brandon-m-wang/safeguardSEA" target="_blank" class="cta">View repository</a>
+                <a href="https://www.youtube.com/watch?v=6cMUJMoY5UA" target="_blank" class="cta">View demo</a>
             </div>
         </div>
         <div class="portfolio-item">
-            <div class="portfolio-description">
+            <div class="portfolio-description has-margin-right" data-aos="fade-right" data-aos-delay="150">
                 <h6>HackTX | UT Austin | Austin, TX</h6>
                 <h1>Grassroots for Housing</h1>
-                <p>Lorem ipsum dolor sit amet, conectetur adipisicing elit.
-                    Lorem ipsum dolor sit amet, conectetur adipisicing elit.</p>
-                <a href="#" class="cta">View repository</a>
+                <p>Combatting racial and economic housing segregation in Austin with activism and awareness. The primary
+                    reason that allows for regressive policies and discriminatory housing infrastructures to remain in
+                    place is the simple lack of awareness and subsequent willingness to take action. The only way to fix
+                    this issue of segregational zoning is to pressure policy-makers to vote for change beginning at the
+                    local (or grassroots) level. The platform is aimed at not only helping the economically challenged
+                    and displaced to find their next month-to-month living space, but also educating the general
+                    population about the geopolitical history and issues that have resulted from redlining and
+                    subsequent zoning policies and to provide avenues for change.</p>
+                <div><h2><span>WINNER</span>1st Place Hack for Housing</h2></div>
+                <a href="https://github.com/brandon-m-wang/grassrootshousing" target="_blank" class="cta">View
+                    repository</a>
+                <a href="https://www.youtube.com/watch?v=svuQOcIFDEw" target="_blank" class="cta">View demo</a>
             </div>
-            <div class="portfolio-img">
+            <div class="portfolio-img" data-aos="fade-left" data-aos-delay="300">
                 <img src="resources/grassroots.png" alt="">
             </div>
         </div>
         <div class="portfolio-item">
-            <div class="portfolio-img">
+            <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="150">
                 <img src="resources/postmint.png" alt="">
             </div>
-            <div class="portfolio-description">
+            <div class="portfolio-description" data-aos="fade-left" data-aos-delay="300">
                 <h6>DubHacks | UW | Seattle, WA</h6>
                 <h1>Postmint</h1>
-                <p>Lorem ipsum dolor sit amet, conectetur adipisicing elit.
-                    Lorem ipsum dolor sit amet, conectetur adipisicing elit.</p>
-                <a href="#" class="cta">View repository</a>
+                <p>Postmint allows users to log in with Instagram
+                    accounts, and then they can upload various product images to the site and select how often they want
+                    to post. Then, a machine learning API was used to associate the images to product names. After that,
+                    trend information for all of the products were scraped, and normalized the data and choose the
+                    product with the highest z-score for that day compared to the set of trend data over the last 5
+                    years. When a post is supposed to be posted, the product that has the highest relative interest for
+                    the day is found, and then a comment and hashtags to post are generated automatically, and posted to
+                    the user.</p>
+                <a href="https://github.com/brandon-m-wang/postmint" target="_blank" class="cta">View repository</a>
+                <a href="https://vimeo.com/469506064" target="_blank" class="cta">View demo</a>
             </div>
         </div>
         <div class="portfolio-item">
-            <div class="portfolio-description">
+            <div class="portfolio-description has-margin-right" data-aos="fade-right" data-aos-delay="150">
                 <h6>HackGT | Georgia Tech | Atlanta, GA</h6>
                 <h1>Educe</h1>
-                <p>Lorem ipsum dolor sit amet, conectetur adipisicing elit.
-                    Lorem ipsum dolor sit amet, conectetur adipisicing elit.</p>
-                <a href="#" class="cta">View repository</a>
+                <p>COVID-19 has pushed education online for communities globally, which has had many negative impacts on
+                    students. The most drastic of which is that students without access to their own devices can't
+                    attend school with their peers. In addition to this, there is a big problem currently with recycling
+                    old computers. This project allows for students in need of certain tech for their distance learning
+                    to register for an account and make posts requesting old devices. The active posts are then shown to
+                    people looking at the site. If somebody is browsing the platform and has an old device that is being
+                    requested, they can contact the student in need via email to set up shipping logistics.</p>
+                <div><h2><span>WINNER</span>Semifinalist</h2></div>
+                <a href="https://github.com/brandon-m-wang/educe" target="_blank" class="cta">View repository</a>
+                <a href="https://vimeo.com/469451418" target="_blank" class="cta">View demo</a>
             </div>
-            <div class="portfolio-img">
+            <div class="portfolio-img" data-aos="fade-left" data-aos-delay="300">
                 <img src="resources/educe.png" alt="">
             </div>
         </div>
         <div class="portfolio-item">
-            <div class="portfolio-img">
+            <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="150">
                 <img src="resources/wildfire.png" alt="">
             </div>
-            <div class="portfolio-description">
+            <div class="portfolio-description" data-aos="fade-left" data-aos-delay="300">
                 <h6>VandyHacks | Vanderbilt | Nashville, TN</h6>
                 <h1>Wildfire Watch</h1>
-                <p>Lorem ipsum dolor sit amet, conectetur adipisicing elit.
-                    Lorem ipsum dolor sit amet, conectetur adipisicing elit.</p>
-                <a href="#" class="cta">View repository</a>
+                <p>A mobile application that utilizes NASA satellite heatmap imagery to map out a self-updating wildfire
+                    distribution and an algorithm that determines the size and threat levels of certain fires with
+                    regards to relative user location. WW allows users to view where wildfires were in the past 24
+                    hours. When a user is in a dangerous vicinity to a wildfire, the app notifies the user to evacuate.
+                    If the app determines that the user is trapped in a fire, it will immediately send messages to first
+                    responders about the user's current location.</p>
+                <a href="https://github.com/brandon-m-wang/wildfirewatchems" target="_blank" class="cta">View
+                    repository</a>
             </div>
         </div>
         <div class="portfolio-item">
-            <div class="portfolio-description">
+            <div class="portfolio-description has-margin-right" data-aos="fade-right" data-aos-delay="150">
                 <h6>HackATL | Emory University | Atlanta, GA</h6>
                 <h1>Mindfull</h1>
-                <p>Lorem ipsum dolor sit amet, conectetur adipisicing elit.
-                    Lorem ipsum dolor sit amet, conectetur adipisicing elit.</p>
-                <a href="#" class="cta">View repository</a>
+                <p>A wireframe that proposes the integration of smartphone accelerometer technology and FDA-approved
+                    neurological assessment batteries to create a means of achieving an early diagnosis of Parkinson's
+                    Disease in at-risk individuals through tremor detection and cognitive health monitoring. Mindfull
+                    seeks to provide those at risk of Parkinson's with an outlet to engage themselves with while
+                    simultaneously tracking a "utility index" which is derived from several assessments made on the user
+                    as they interact with the application. Whether it's cognitively stimulating puzzles or tremor
+                    assessments based off of smartphone accelerometers, Mindfull seeks to aid in the early diagnosis of
+                    Parkinson's disease, and ultimately improve health outcomes.</p>
+                <div><h2><span>WINNER</span>Top 8 Best Hack Overall</h2></div>
+                <a href="javascript:void(0);" class="cta">Repository not available (wireframe)</a>
             </div>
-            <div class="portfolio-img">
+            <div class="portfolio-img" data-aos="fade-left" data-aos-delay="300">
                 <img src="resources/mindfull.png" alt="">
             </div>
         </div>
@@ -221,33 +282,55 @@
             <h1>Work Experience</h1>
             <h6>Past and current positions</h6>
         </div>
-        <div class="timeline">
+        <div class="timeline" data-aos="fade-down" data-aos-delay="300">
             <ul>
-                <li class="date" data-date="">
-                    <h1>Company</h1>
-                    <p>Lorem ipsum dolor sit amet, conectetur adipisicing elit.
-                        Lorem ipsum dolor sit amet, conectetur adipisicing elit.</p>
+                <li class="date" data-date="08/2020 - Present">
+                    <h1>Cal Hacks</h1>
+                    <p>Director of Logistics and Marketing</p>
                 </li>
-                <li class="date" data-date="">
-                    <h1>Company</h1>
-                    <p>Lorem ipsum dolor sit amet, conectetur adipisicing elit.
-                        Lorem ipsum dolor sit amet, conectetur adipisicing elit.</p>
+                <li class="date" data-date="08/2020 - Present">
+                    <h1>TheCodex.me</h1>
+                    <p>Associate Content Producer</p>
                 </li>
-                <li class="date" data-date="">
-                    <h1>Company</h1>
-                    <p>Lorem ipsum dolor sit amet, conectetur adipisicing elit.
-                        Lorem ipsum dolor sit amet, conectetur adipisicing elit.</p>
+                <li class="date" data-date="05/2019 - 09/2019">
+                    <h1>Austin First Mortgage</h1>
+                    <p>Webdev Intern</p>
                 </li>
             </ul>
         </div>
     </div>
 </section>
-
-<section class="contact" id="contact">
+<section class="others" id="others">
     <div class="container">
         <div class="section-heading">
-            <h1>Contact</h1>
-            <h6>My links!</h6>
+            <h1>Other</h1>
+            <h6>My full list of projects and other things</h6>
+        </div>
+        <div class="other-things">
+            <a href="projects.html">
+                <div class="other" data-aos="fade-up-right" data-aos-delay="150">
+                    <div class="icon-container">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h1>Full Project Gallery</h1>
+                </div>
+            </a>
+            <a href="snapshots.html">
+                <div class="other" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-container">
+                        <i class="fas fa-camera-retro"></i>
+                    </div>
+                    <h1>Snapshots</h1>
+                </div>
+            </a>
+            <a href="timeless.html">
+                <div class="other" data-aos="fade-up-left" data-aos-delay="450">
+                    <div class="icon-container">
+                        <i class="fas fa-hourglass-start"></i>
+                    </div>
+                    <h1>Timeless</h1>
+                </div>
+            </a>
         </div>
     </div>
 </section>
@@ -255,9 +338,26 @@
 <footer class="copyright">
     <div class="up" id="up">
         <i class="fas fa-chevron-up"></i>
-        <p>&copy; 2020 Brandon Wang</p>
     </div>
+    <p>&copy; 2020 Brandon Wang</p>
 </footer>
+
+<div class="animation-area">
+    <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="main.js"></script>
