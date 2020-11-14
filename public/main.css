@@ -8,13 +8,19 @@ html {
     font-size: 10px;
     font-family: "Yantramanav", sans-serif;
     color: #eee;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
 }
 
 body {
     width: 100%;
     height: 100%;
-    background: url("../resources/site-bg.png") no-repeat center fixed;
+    background: url("resources/site-bg.png") no-repeat center fixed;
     background-size: cover;
+}
+
+::-webkit-scrollbar {
+    display:none;
 }
 
 a {
@@ -443,14 +449,14 @@ li {
 }
 
 .timeline {
-    margin: auto auto auto 17rem;
+    margin: auto auto auto 10rem;
 }
 
 .timeline ul {
     border-left: 4px solid;
     border-image: linear-gradient(to top, #ffe838, #fd57bf) 0 100%;
     border-radius: 0.8rem;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.2);
     margin: 0 auto;
     position: relative;
     padding: 5rem;
@@ -734,8 +740,9 @@ timeline date::after {
     body {
         width: 100%;
         height: 100%;
-        background: url("../resources/site-bg.png") no-repeat center fixed;
+        background: url("resources/site-bg.png") no-repeat center fixed;
         background-size: cover;
+        overflow: hidden;
     }
 
     .landing-text h1 {
@@ -754,6 +761,17 @@ timeline date::after {
         margin: 2rem 0;
     }
 
+    .social-media > ul {
+        transform: scale(0.9);
+        border: 2px solid;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .about-details li{
+        margin: 0;
+        padding: 2rem 0;
+    }
+
     .nav-link {
         font-size: 4.5rem;
     }
@@ -766,9 +784,6 @@ timeline date::after {
         font-size: 3rem;
     }
 
-    .about-details .nav-list {
-        flex-direction: initial;
-    }
 
     .about-details li {
         margin: 0 2rem;
@@ -796,10 +811,10 @@ timeline date::after {
     }
 }
 
-@media screen and (max-width: 600px) {
-    .menu-toggler {
-        top: 2rem;
-        right: 2rem;
+@media screen and (max-width: 900px) {
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
     .landing-text h1 {
@@ -846,5 +861,58 @@ timeline date::after {
 
     .up {
         right: 2rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        width: 100%;
+        height: 100%;
+        background: url("resources/site-bg.png") no-repeat center fixed;
+        background-size: cover;
+    }
+
+    .landing-text h1 {
+        font-size: 5rem;
+    }
+
+    .landing-text h6 {
+        font-size: 1.7rem;
+    }
+
+    .about .container {
+        flex-direction: column;
+    }
+
+    .section-heading h1 {
+        font-size: 3rem;
+    }
+
+    li {
+        margin: 2rem 0;
+    }
+
+    .nav-link {
+        font-size: 4.5rem;
+    }
+
+    .icon-container i {
+        font-size: 3.5rem;
+    }
+
+    .timeline {
+        margin: auto auto auto 3rem;
+    }
+
+    .timeline ul {
+        margin: 0 0 0 auto;
+    }
+
+    .timeline .date::before {
+        left: -20rem;
+    }
+
+    .timeline .date::after {
+        left: -5.9rem;
     }
 }
