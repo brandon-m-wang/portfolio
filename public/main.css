@@ -13,7 +13,7 @@ html {
 body {
     width: 100%;
     height: 100%;
-    background: url("resources/site-bg.png") no-repeat center fixed;
+    background: url("../resources/site-bg.png") no-repeat center fixed;
     background-size: cover;
 }
 
@@ -82,7 +82,7 @@ img {
     height: 1.5rem;
     border-radius: 100%;
     bottom: -1rem;
-    display:none; /*disabling optional circle style*/
+    display: none; /*disabling optional circle style*/
 }
 
 .section-heading h6 {
@@ -230,7 +230,7 @@ li {
     user-select: none;
 }
 
-.landing-text h1:hover{
+.landing-text h1:hover {
     /*maybe*/
 }
 
@@ -294,15 +294,15 @@ li {
     color: #fd57bf;
 }
 
-.fa-envelope-square:hover{
+.fa-envelope-square:hover {
     color: #c8253c;
 }
 
-.fa-github:hover{
+.fa-github:hover {
     color: #24292e;
 }
 
-.fa-spotify:hover{
+.fa-spotify:hover {
     color: #1DB954;
 }
 
@@ -318,18 +318,23 @@ li {
     font-size: 2.6rem;
     font-weight: 300;
     margin: 3rem 0;
+    user-select: none;
 }
 
-.skill *{
+.my-skills p {
+    user-select: none;
+}
+
+.skill * {
     transition: transform .2s ease-in-out;
 }
 
-.skill:hover *{
+.skill:hover * {
     transform: scale(1.1);
 }
 
-.skill:hover h1{
-    font-weight: 900;
+.skill:hover h1 {
+    text-shadow: 0px 0px 2px white, 0px 0px 1.5px white, 0px 0px 1.5px white, 0px 0px 1px #553300, 0px 0px 1px #553300;
 }
 
 .skill p {
@@ -337,7 +342,7 @@ li {
     font-weight: 100;
 }
 
-.icon-container{
+.icon-container {
     display: flex;
     align-items: center;
 }
@@ -378,12 +383,12 @@ li {
     z-index: 1001;
 }
 
-.portfolio img{
+.portfolio img {
     transition: all .4s ease-in-out;
     opacity: 0.55;
 }
 
-.portfolio img:hover{
+.portfolio img:hover {
     transform: scale(1.1);
     opacity: 1;
 }
@@ -406,16 +411,16 @@ li {
     opacity: 0.7;
 }
 
-.portfolio-description div{
+.portfolio-description div {
     margin: 2rem 0 0;
 }
 
-.portfolio-description h2{
+.portfolio-description h2 {
     margin: 0.5rem 0 0;
     font-weight: 300;
 }
 
-.portfolio-description h2 span{
+.portfolio-description h2 span {
     font-weight: 900;
     background: #ffc800;
     padding: 0 0.5rem;
@@ -437,8 +442,8 @@ li {
     color: #2f67cd;
 }
 
-.timeline{
-    margin: auto auto auto 13rem;
+.timeline {
+    margin: auto auto auto 17rem;
 }
 
 .timeline ul {
@@ -452,6 +457,7 @@ li {
     list-style: none;
     text-align: left;
     width: 70%;
+    user-select: none;
 }
 
 .timeline h1 {
@@ -462,12 +468,13 @@ li {
     opacity: 0.7;
 }
 
-.timeline ul>li{ /*direct child selector ">" as opposed to ul li*/
+.timeline ul > li { /*direct child selector ">" as opposed to ul li*/
     transition: transform .4s ease-in-out;
 }
 
-.timeline ul>li:hover{
+.timeline ul > li:hover {
     transform: scale(1.1);
+    text-shadow: 0px 0px 1.5px white, 0px 0px 1.5px white, 0px 0px 1.5px white, 0px 0px 1px #553300, 0px 0px 1px #553300;
 }
 
 .timeline .date {
@@ -509,6 +516,14 @@ timeline date::after {
     background-color: #313534;
 }
 
+.job-title {
+    font-size: 1.25rem;
+    font-weight: 100;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+}
+
 .other-things {
     margin-bottom: 10rem;
     display: grid;
@@ -524,17 +539,16 @@ timeline date::after {
     text-transform: uppercase;
 }
 
-
-.other *{
+.other * {
     transition: transform .2s ease-in-out;
 }
 
-.other:hover *{
+.other:hover * {
     transform: scale(1.1);
 }
 
-.other:hover h1{
-    font-weight: 900;
+.other:hover h1 {
+    text-shadow: 0px 0px 2px white, 0px 0px 1.5px white, 0px 0px 1.5px white, 0px 0px 1px #553300, 0px 0px 1px #553300;
 }
 
 .other p {
@@ -570,10 +584,11 @@ timeline date::after {
     font-size: 2rem;
 }
 
-.copyright div{
+.copyright div {
     transition: all 0.3s ease-in-out;
 }
-.copyright div:hover{
+
+.copyright div:hover {
     transform: scale(1.3);
     box-shadow: 0 0 18px 3px #c38ecd;
 }
@@ -719,7 +734,7 @@ timeline date::after {
     body {
         width: 100%;
         height: 100%;
-        background: url("resources/site-bg.png") no-repeat center fixed;
+        background: url("../resources/site-bg.png") no-repeat center fixed;
         background-size: cover;
     }
 
@@ -764,9 +779,10 @@ timeline date::after {
 
     }
 
-    .timeline{
+    .timeline {
         margin: auto auto auto 3rem;
     }
+
     .timeline ul {
         margin: 0 0 0 auto;
     }
