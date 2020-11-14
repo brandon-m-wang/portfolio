@@ -125,8 +125,10 @@ header {
     background-color: #030118;
     border-bottom-right-radius: 100%;
     border-bottom-left-radius: 100%;
+    visibility: hidden;
     transition: all 650ms cubic-bezier(1, 0, 0, 1);
 }
+
 
 .nav-list {
     list-style: none;
@@ -161,6 +163,7 @@ li {
 }
 
 .top-nav.open {
+    visibility: visible;
     top: 0;
     border-radius: initial;
 }
