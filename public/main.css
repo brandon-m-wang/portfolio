@@ -8,7 +8,7 @@ html {
     font-size: 10px;
     font-family: "Yantramanav", sans-serif;
     color: #eee;
-    -ms-overflow-style: none;  /* IE and Edge */
+    -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none;
 }
 
@@ -20,7 +20,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    display:none;
+    display: none;
 }
 
 a {
@@ -247,7 +247,7 @@ li {
 
 }
 
-.landing-text::before{
+.landing-text::before {
     content: "";
     position: absolute;
     left: 0;
@@ -260,7 +260,7 @@ li {
     animation: reveal-borders 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
 }
 
-.landing-text::after{
+.landing-text::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -272,7 +272,7 @@ li {
     animation: reveal-borders-bottom 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
 }
 
-.landing-text h1 span::before{
+.landing-text h1 span::before {
     content: "";
     position: absolute;
     left: 0;
@@ -284,7 +284,7 @@ li {
     animation: reveal-borders-left 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
 }
 
-.landing-text h1 span::after{
+.landing-text h1 span::after {
     content: "";
     position: absolute;
     right: 0;
@@ -296,52 +296,52 @@ li {
 }
 
 @keyframes reveal {
-  0% {
-    transform: translate(-50%,50%);
-      opacity: 0;
-  }
-  100% {
-    transform: translate(-50%,-50%);
-      opacity: 1;
-  }
+    0% {
+        transform: translate(-50%, 50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
 }
 
-@keyframes reveal-borders{
-    0%{
+@keyframes reveal-borders {
+    0% {
         width: 100%;
     }
-    100%{
+    100% {
         width: 0%;
     }
 }
 
-@keyframes reveal-borders-bottom{
-    0%{
+@keyframes reveal-borders-bottom {
+    0% {
         width: 100%;
         left: 0;
     }
-    100%{
+    100% {
         width: 0%;
         left: 100%;
     }
 }
 
-@keyframes reveal-borders-right{
-    0%{
+@keyframes reveal-borders-right {
+    0% {
         height: 100%;
         top: 0
     }
-    100%{
+    100% {
         height: 0%;
         top: 100%;
     }
 }
 
-@keyframes reveal-borders-left{
-    0%{
+@keyframes reveal-borders-left {
+    0% {
         height: 100%;
     }
-    100%{
+    100% {
         height: 0%;
     }
 }
@@ -844,7 +844,7 @@ timeline date::after {
 /* media queries */
 
 @media screen and (max-width: 1075px) {
-    .landing-text h1{
+    .landing-text h1 {
         font-size: 12rem;
     }
 }
@@ -907,6 +907,7 @@ timeline date::after {
         font-size: 7rem;
     }
 }
+
 @media screen and (max-width: 768px) {
     body {
         width: 100%;
@@ -938,7 +939,7 @@ timeline date::after {
         background-color: rgba(0, 0, 0, 0.2);
     }
 
-    .about-details li{
+    .about-details li {
         margin: 0;
         padding: 2rem 0;
     }
@@ -979,6 +980,50 @@ timeline date::after {
 
     .timeline .date::after {
         left: -5.9rem;
+    }
+
+    .landing-text::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 5px;
+        border-top: 4px solid white;
+        border-image: none;
+        opacity: 0.8;
+        animation: reveal-borders 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+    }
+
+    .landing-text::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 5px;
+        border-bottom: 4px solid white;
+        border-image: none;
+        opacity: 0.8;
+        animation: reveal-borders-bottom 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+    }
+
+    .landing-text h1 span::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0.8;
+        border-left: 4px solid white;
+        border-image: none;
+        animation: reveal-borders-left 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+    }
+
+    .landing-text h1 span::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        opacity: 0.8;
+        border-left: 4px solid white;
+        border-image: none;
+        animation: reveal-borders-right 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
     }
 }
 
@@ -1036,7 +1081,7 @@ timeline date::after {
 }
 
 @media screen and (max-width: 320px) {
-    .landing-text h1{
+    .landing-text h1 {
         font-size: 2.3rem;
     }
 }
