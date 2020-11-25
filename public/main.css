@@ -236,7 +236,7 @@ li {
     line-height: 0.8;
     font-size: 15rem;
     font-weight: 900;
-    background: linear-gradient(to top, #ffe838, #fd57bf);
+    background: linear-gradient(to top, #a78aa7, #eaeaea);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 1rem;
@@ -244,7 +244,7 @@ li {
 }
 
 .landing-text h1:hover {
-    /*maybe*/
+
 }
 
 .landing-text::before{
@@ -253,7 +253,9 @@ li {
     left: 0;
     top: 0;
     height: 5px;
-    border-top: 3px solid white;
+    border-top: 4px solid;
+    border-image: linear-gradient(to right, #ffe838, #fd57bf) 0 100%;
+    border-image-slice: 1;
     opacity: 0.8;
     animation: reveal-borders 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
 }
@@ -263,7 +265,9 @@ li {
     position: absolute;
     bottom: 0;
     height: 5px;
-    border-bottom: 3px solid white;
+    border-bottom: 4px solid;
+    border-image: linear-gradient(to left, #ffe838, #fd57bf) 0 100%;
+    border-image-slice: 1;
     opacity: 0.8;
     animation: reveal-borders-bottom 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
 }
@@ -274,7 +278,9 @@ li {
     left: 0;
     top: 0;
     opacity: 0.8;
-    border-left: 3px solid white;
+    border-left: 4px solid;
+    border-image: linear-gradient(to bottom, #ffe838, #fd57bf) 0 100%;
+    border-image-slice: 1;
     animation: reveal-borders-left 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
 }
 
@@ -283,7 +289,9 @@ li {
     position: absolute;
     right: 0;
     opacity: 0.8;
-    border-left: 3px solid white;
+    border-left: 4px solid;
+    border-image: linear-gradient(to top, #ffe838, #fd57bf) 0 100%;
+    border-image-slice: 1;
     animation: reveal-borders-right 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
 }
 
