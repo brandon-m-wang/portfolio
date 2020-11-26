@@ -10,6 +10,7 @@ html {
     color: #eee;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none;
+    background-color: #1c001d;
 }
 
 body {
