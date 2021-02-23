@@ -36,7 +36,7 @@ p {
 
 img {
     width: 100%;
-    filter: drop-shadow(0 -2mm 5mm rgb(82, 57, 96));
+    filter: drop-shadow(0 -2mm 5mm rgb(62, 43, 72));
 }
 
 .container {
@@ -49,6 +49,7 @@ img {
 
 .in-text-link {
     background: linear-gradient(to top, #ffe838, #fd57bf);
+    background: linear-gradient(to top, #2654a5, #2f67cd);
     font-weight: 900;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -62,7 +63,7 @@ img {
 .section-heading h1 {
     font-size: 4.5rem;
     color: rgba(255, 255, 255, 0.3);
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-weight: 900;
     position: relative;
     margin-bottom: 1rem;
@@ -157,6 +158,7 @@ li {
 
 .nav-link:hover, nav-link:focus {
     background: linear-gradient(to top, #ffe838, #fd57bf);
+    background: linear-gradient(to top, #2654a5, #2f67cd);
     font-weight: 100;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -190,6 +192,7 @@ li {
 
 .bar {
     background: linear-gradient(to right, #ffe838, #fd57bf);
+    background: linear-gradient(to top, #a78aa7, #eaeaea);
     width: 100%;
     height: 4px;
     border-radius: .8rem;
@@ -234,9 +237,9 @@ li {
 }
 
 .landing-text h1 {
-    line-height: 0.8;
-    font-size: 15rem;
-    font-weight: 900;
+    line-height: 0.9;
+    font-size: 12rem;
+    font-weight: 500;
     background: linear-gradient(to top, #a78aa7, #eaeaea);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -254,9 +257,11 @@ li {
     left: 0;
     top: 0;
     height: 5px;
-    border-top: 4px solid;
+    border-top: 4px solid whitesmoke;
+    /*
     border-image: linear-gradient(to right, #ffe838, #fd57bf) 0 100%;
     border-image-slice: 1;
+    */
     opacity: 0.8;
     animation: reveal-borders 1.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
@@ -266,9 +271,11 @@ li {
     position: absolute;
     bottom: 0;
     height: 5px;
-    border-bottom: 4px solid;
+    border-bottom: 4px solid whitesmoke;
+    /*
     border-image: linear-gradient(to left, #ffe838, #fd57bf) 0 100%;
     border-image-slice: 1;
+     */
     opacity: 0.8;
     animation: reveal-borders-bottom 1.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
@@ -279,9 +286,9 @@ li {
     left: 0;
     top: 0;
     opacity: 0.8;
-    border-left: 4px solid;
-    border-image: linear-gradient(to bottom, #ffe838, #fd57bf) 0 100%;
-    border-image-slice: 1;
+    border-left: 4px solid whitesmoke;
+    /*border-image: linear-gradient(to bottom, #ffe838, #fd57bf) 0 100%;
+    border-image-slice: 1;*/
     animation: reveal-borders-left 1.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
@@ -290,9 +297,11 @@ li {
     position: absolute;
     right: 0;
     opacity: 0.8;
-    border-left: 4px solid;
+    border-left: 4px solid whitesmoke;
+    /*
     border-image: linear-gradient(to top, #ffe838, #fd57bf) 0 100%;
     border-image-slice: 1;
+    */
     animation: reveal-borders-right 1.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
@@ -347,11 +356,12 @@ li {
     }
 }
 
-.landing-text h6 {
-    font-size: 2rem;
-    font-weight: 300;
+.landing-text p {
+    font-size: 4rem;
+    font-weight: 100;
     opacity: 0.7;
 }
+/*}*/
 
 .about .container {
     display: flex;
@@ -361,7 +371,7 @@ li {
 
 .about-heading {
     text-align: center;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     line-height: 0;
     margin-bottom: 6rem;
 }
@@ -378,10 +388,15 @@ li {
 }
 
 .profile-img {
-    flex: 0.45;
+    flex: 0.65;
     margin-top: 5rem;
     margin-right: 5rem;
+    height: 540px;
 }
+
+.profile-img img{position:absolute; width: 453px; height: 540px !important; left:0; top: 0; object-fit: cover; filter: none; z-index:1}
+
+.profile-img img.active{z-index:3}
 
 .about-details {
     flex: 1;
@@ -398,6 +413,10 @@ li {
 
 .fa-facebook:hover {
     color: #4267b2;
+}
+
+.fa-file-alt:hover {
+    color: #ffe838;
 }
 
 .fa-linkedin:hover {
@@ -466,6 +485,7 @@ li {
     margin: 0 auto 1rem;
     color: #eee;
     background: linear-gradient(to top, #ffe838, #fd57bf);
+    background: linear-gradient(to top, #a78aa7, #eaeaea);
     font-weight: 900;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -563,6 +583,7 @@ li {
 .timeline ul {
     border-left: 4px solid;
     border-image: linear-gradient(to top, #ffe838, #fd57bf) 0 100%;
+    border-image: linear-gradient(to top, #a78aa7, #eaeaea) 0 100%;
     border-radius: 0.8rem;
     background-color: rgba(0, 0, 0, 0.2);
     margin: 0 auto;
@@ -831,6 +852,42 @@ timeline date::after {
     animation-delay: 6.5s;
 }
 
+.word {
+    position: absolute;
+    width: auto;
+    left: 50%;
+    font-size: 4rem;
+    font-weight: 100;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+.word span{
+    white-space:pre;
+}
+
+.letter {
+    display: inline-block;
+    position: relative;
+    float: left;
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+    transform: rotateX(-90deg);
+}
+
+.letter.in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 @keyframes animate {
     0% {
         transform: translateX(0) rotate(0deg);
@@ -844,9 +901,40 @@ timeline date::after {
 
 /* media queries */
 
-@media screen and (max-width: 1075px) {
+@media screen and (max-width: 1300px){
+    .profile-img img{
+        width: 300px !important;
+        height: 450px !important;
+    }
+    .profile-img{
+        flex: 0.45;
+    }
+}
+
+@media screen and (max-width: 1115px){
+    .profile-img img{
+        width: 453px;
+        height: 540px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .about .container{
+        display: block;
+    }
+
+    .profile-img{
+        height: 540px !important;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 1175px) {
     .landing-text h1 {
         font-size: 12rem;
+    }
+    .word {
+        font-size: 2.5rem;
     }
 }
 
@@ -856,11 +944,15 @@ timeline date::after {
         overflow-x: hidden;
     }
 
+    .word {
+        font-size: 1.5rem;
+    }
+
     .landing-text h1 {
         font-size: 8rem;
     }
 
-    .landing-text h6 {
+    .landing-text p {
         font-size: 1.4rem;
     }
 
@@ -922,7 +1014,7 @@ timeline date::after {
         font-size: 6.5rem;
     }
 
-    .landing-text h6 {
+    .landing-text p {
         font-size: 1.7rem;
     }
 
@@ -1040,7 +1132,7 @@ timeline date::after {
         font-size: 5rem;
     }
 
-    .landing-text h6 {
+    .landing-text p {
         font-size: 1.7rem;
     }
 

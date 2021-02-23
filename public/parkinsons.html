@@ -18,14 +18,173 @@
 </head>
 <body>
 <header>
-    <div class="back-to-home">
-        <i class="fas fa-chevron-circle-left"></i>
+    <div class="back-to-home" data-aos="fade-down" data-aos-delay="200">
+        <a href="index.html"><i class="fas fa-chevron-circle-left"></i></a>
     </div>
     <div class="landing-text-project">
-        <h1><span>Parkinson's Classifier</span></h1>
-        <h6>A hand-made portfolio <span style="font-weight: 100">(fully responsive)</span>
-        </h6>
+        <h1><span>Parkinson's classifier from various speech signal processing algorithms including Time Frequency
+            Features, Mel Frequency Cepstral Coefficients (MFCCs), and Wavelet Transform based Features</span></h1>
+        <h6 data-aos="fade-right" data-aos-delay="1400">Using k-NN instance-based learning</h6>
+    </div>
+    <div class="landing-img">
+        <img src="resources/project-header-img.png"/>
     </div>
 </header>
+<section class="context">
+    <div class="container">
+        <div class="section-heading-project" data-aos="fade-down" data-aos-delay="150">
+            <h1>Context</h1>
+        </div>
+        <div class="container">
+            <div class="context-desc" data-aos="fade-right" data-aos-delay="150">
+                <h1 class="sub-header">Preface</h1>
+                <p>
+                    This is my lazy-learning k-NN classifier built from training data provided by a 2018 comparative
+                    analysis of speech processing algorithms led by various researchers in Istanbul<sup>1</sup>.
+                    Historically, around 90% of diagnosed PD patients had demonstrated some type of vocal disorder in
+                    earlier stages of the disease's progression. The study the classifier is centered around leverages
+                    signal processing algorithms taken from simple speech recordings to provide clinically feasible
+                    information. Patients are asked to sustain vowel phonations, while signal processing algorithms map
+                    out hyper-specific attributes. Of them are Time Frequency Features (TFF), Mel Frequency Cepstral
+                    Coefficients (MFCCs), Wavelet Transform based Features, Vocal Fold Features and TWQT. In basic
+                    terms, TFF is a means of viewing voice signals in a multidimensional fashion regarding time (s) and
+                    frequency (Hz). Where simply looking at one-dimensional attributes like intensity or magnitude falls
+                    short, TFF provides more insight. A similar principle is used in the creation of k-NN classifiers.
+                    MFCCs are simply put, coefficients of a algorithmic way of detecting periodic occurrences in
+                    waveforms. Wavelet transformation is the decomposition of a signal into a set of basis functions
+                    consisting of contractions, expansions, and translations of a given mother function<sup>2</sup>.
+                    Vocal Fold Features are extracting using special instruments that monitor the physical activity of
+                    the patient's vocal folds. What this classifier seeks to achieve is a means of accurately predicting
+                    whether or not someone has Parkinson's Disease from a simple voice recording (provided all the data
+                    is extractable) in the early stages. Since there is no cure or treatment for PD, the best treatment
+                    is ultimately early diagnosis.
+                </p>
+            </div>
+            <div class="container-sub" data-aos="fade-left" data-aos-delay="150">
+                <div class="context-data">
+                    <h1 class="sub-header">Data</h1>
+                    <img src="resources/parkinsons-data.JPG"/>
+                    <img src="resources/parkinsons-data-2.JPG"/>
+                    <img src="resources/parkinsons-data-3.JPG"/>
+                </div>
+                <div class="context-credibility">
+                    <h1 class="sub-header">Sources</h1>
+                    <p>Data from UCI's Machine Learning Repository, along with various
+                        departments from Bahcesehir University, Yildiz Technical University, and Istanbul
+                        University<sup>3</sup>.</p>
+                    <img src="resources/sources.png" style="transform: scale(0.6)"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="building" data-aos="fade-right" data-aos-delay="150">
+    <div class="container">
+        <div class="section-heading-project">
+            <h1>Building the Classifier</h1>
+        </div>
+        <div class="container">
+            <div class="container-building-1">
+                <h1 class="sub-header-building-left">Cleaning & </br> preparing data</h1>
+                <img src="resources/building.JPG"/>
+                <p>First, only the clinically useful attributes should be selected from this dataset. Namely,
+                    gender and ID should be removed as they are irrelevant conflating factors that will mislead the
+                    learning process if left in.</p>
+                <img src="resources/building-2.JPG"/>
+            </div>
+            <div class="container-building-2">
+                <p>Because data collected varied significantly in terms of its raw numerical values (with some being
+                    between 1 and -1, and others being in the tens of thousands), it would be ideal to standardize the
+                    values of every individual attribute so as to not attribute too much distancing weight on
+                    attributes that may be large in number but limited in implementation as an actual predictive measure
+                    . To standardize, for each column the standard deviation is found formulaically, and applied in
+                    the scaled form of each individual value minus the mean over the standard deviation.
+                    </br>
+                    <span style="display: inline-block; width: 100%; display: flex; justify-content:
+                    center; transform: scale(0.9)">
+                        <img src="resources/sd.png" style="display: inline; max-height: 40px; width: auto;"/>
+                        <img src="resources/sd2.png" style="display: inline; max-height: 40px; width: auto;
+                        padding-left: 2rem;
+                        filter: invert(100%)"/></span>
+                </p>
+                <img src="resources/building-4.JPG"/>
+            </div>
+            <div class="container-building-3">
+                <img src="resources/building-3.JPG"/>
+                <p style="font-size: 1.5rem;">A simple operation to replace labels</p>
+            </div>
+            <div class="container-building-4">
+                <img src="resources/building-5.JPG"/>
+                <p>By calculating the Euclidean distance between any two given points, the result can be used
+                    as a component of k-NN classification. A simple function that changes row to array and
+                    calculates distance values for every attribute value will do for now. This dataset provides over
+                    750 clinical attributes.</br>
+                <span style="display: inline-block; width: 100%; display: flex; justify-content:
+                    center; transform: scale(1.3)">
+                        <img src="resources/ed.png" style="display: inline; max-height: 40px; width: auto; filter: invert(100%)"/>
+                        </span>
+                </p>
+            </div>
+             <div class="container-building-5">
+                <img src="resources/building-6.JPG" style="margin-right: 2rem;"/>
+                <img src="resources/building-7.JPG"/>
+                <h1 class="sub-header-building-right">Interpreting </br>attributes</h1>
+            </div>
+            <div class="container-building-6">
+            <p>The importance of leveraging the data to its full extent can be illustrated by a simple
+                    two-dimensional scatter comparison between two arbitrary attributes. While in some cases, like
+                    the one on the right, a pattern albeit is more apparent but still insufficient, in most cases
+                restricting learning to very few attributes does not offer a clear associative relationship for
+                classification.</p>
+            </div>
+            <div class="container-building-7">
+            <p>Additionally, </p>
+            <div class="container-sub-building">
+                <img src="resources/building-8.JPG" style="margin-bottom: 2rem;"/>
+                <img src="resources/building-9.JPG"/>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="context">
+    <div class="container">
+        <div class="section-heading-project">
+            <h1>Feasibility</h1>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+            est
+            laborum.</p>
+    </div>
+</section>
+<section class="context">
+    <div class="container">
+        <div class="section-heading-project">
+            <h1>Footnotes</h1>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+            est
+            laborum.</p>
+    </div>
+</section>
+
+<footer class="copyright">
+    <div class="up" id="up">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    <p>&copy; 2020 Brandon Wang</p>
+</footer>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="main.js"></script>
 </body>
+
 </html>
