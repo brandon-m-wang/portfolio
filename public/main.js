@@ -10,8 +10,19 @@ function cycleImages(){
 
 $(document).ready(function () {
 
-    setInterval('cycleImages()', 3000);
+    setInterval(function(){
+        var x = $(".box-area > li").position();
+        $(".box-area > li").html(`x-pos: ${x.left.toFixed(2)}`);
+    }, 1);
 
+    var cycle = setInterval('cycleImages()', 3000);
+
+    document.addEventListener("visibilitychange", function() {
+        if (document.hidden) {
+            clearInterval(cycle);
+            $('#pfp1').css("z-index", "100");
+        }
+    })
     /*$('.profile-img').mouseenter(function () {
         interval = setInterval('cycleImages()', 3500);
     }).mouseleave(function (){
