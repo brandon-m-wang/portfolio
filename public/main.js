@@ -1,23 +1,81 @@
-function cycleImages(){
-      var $active = $('.profile-img .active');
-      var $next = ($active.next().length > 0) ? $active.next() : $('.profile-img img:first');
-      $next.css('z-index',2);//move the next image up the pile
-      $active.fadeOut(1500,function(){//fade out the top image
-	  $active.css('z-index',1).show().removeClass('active');//reset the z-index and unhide the image
-          $next.css('z-index', 3).addClass('active');//make the next image the top one
-      });
+function cycleImages() {
+    var $active = $('.profile-img .active');
+    var $next = ($active.next().length > 0) ? $active.next() : $('.profile-img img:first');
+    $next.css('z-index', 2);//move the next image up the pile
+    $active.fadeOut(1500, function () {//fade out the top image
+        $active.css('z-index', 1).show().removeClass('active');//reset the z-index and unhide the image
+        $next.css('z-index', 3).addClass('active');//make the next image the top one
+    });
+}
+
+var ctx;
+var audio;
+var audioSrc;
+var analyser;
+var flag = false;
+
+function onClickMoosic() {
+    if (!flag) {
+        ctx = new AudioContext();
+        audio = document.getElementById('myAudio');
+        audioSrc = ctx.createMediaElementSource(audio);
+        analyser = ctx.createAnalyser();
+
+        audioSrc.connect(analyser);
+        audioSrc.connect(ctx.destination);
+        flag = true;
     }
+    var frequencyData = new Uint8Array(analyser.frequencyBinCount);
+
+    function renderFrame() {
+        requestAnimationFrame(renderFrame);
+        analyser.getByteFrequencyData(frequencyData);
+        $(".box-area > li:not(:last-child)").css("filter", `brightness(${((frequencyData[230] + frequencyData[210]) / 2) / 100})`);
+    }
+
+    var myAudio = document.getElementById("myAudio");
+    myAudio.volume = 0.15;
+    myAudio.paused ? ($("#moosic").css({"text-shadow": "2px 2px 7px white", "color": "white"}), ctx.resume(), $(".box-area > li:not(:last-child)").css("background-color", "white"), renderFrame()) : ($("#moosic").css("text-shadow", "none"), ctx.suspend());
+    return myAudio.paused ? myAudio.play() : myAudio.pause();
+}
+
+$(document).on('click touchstart', '#moosic', function(e){
+    e.preventDefault();
+    if (!flag) {
+        ctx = new AudioContext();
+        audio = document.getElementById('myAudio');
+        audioSrc = ctx.createMediaElementSource(audio);
+        analyser = ctx.createAnalyser();
+
+        audioSrc.connect(analyser);
+        audioSrc.connect(ctx.destination);
+        flag = true;
+    }
+    var frequencyData = new Uint8Array(analyser.frequencyBinCount);
+
+    function renderFrame() {
+        requestAnimationFrame(renderFrame);
+        analyser.getByteFrequencyData(frequencyData);
+        $(".box-area > li:not(:last-child)").css("filter", `brightness(${((frequencyData[230] + frequencyData[210]) / 2) / 100})`);
+    }
+
+    var myAudio = document.getElementById("myAudio");
+    myAudio.volume = 0.15;
+    myAudio.paused ? ($("#moosic").css({"text-shadow": "2px 2px 7px white", "color": "white"}), ctx.resume(), $(".box-area > li:not(:last-child)").css("background-color", "white"), renderFrame()) : ($("#moosic").css({"text-shadow": "none", "color": ""}), ctx.suspend());
+    return myAudio.paused ? myAudio.play() : myAudio.pause();
+})
+
 
 $(document).ready(function () {
 
-    setInterval(function(){
+    setInterval(function () {
         var x = $(".box-area > li").position();
-        $(".box-area > li").html(`x-pos: ${x.left.toFixed(2)}`);
+        $(".box-area > li:not(:last-child)").html(`x-pos: ${x.left.toFixed(2)}`);
     }, 1);
 
     var cycle = setInterval('cycleImages()', 3000);
 
-    document.addEventListener("visibilitychange", function() {
+    document.addEventListener("visibilitychange", function () {
         if (document.hidden) {
             clearInterval(cycle);
             $('#pfp1').css("z-index", "100");
@@ -52,7 +110,7 @@ $(document).ready(function () {
     });
 
 
-    $('#pfp').fadeOut('fast', function() {
+    $('#pfp').fadeOut('fast', function () {
         $('#imgT').attr('src', goimg).fadeIn('fast');
     });
 

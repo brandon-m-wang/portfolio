@@ -878,8 +878,9 @@ timeline date::after {
     opacity: 0;
 }
 
-.word chinese {
-    font-size: 2.5rem;
+.chinese {
+    font-size: 2.75rem;
+    margin-top: 0.95rem;
 }
 
 .word span {
@@ -921,6 +922,10 @@ timeline date::after {
 
 /* media queries */
 
+#moosic:focus{
+    outline: none;
+}
+
 @media screen and (max-width: 1300px) {
     .profile-img img {
         width: 300px !important;
@@ -960,11 +965,12 @@ timeline date::after {
         font-size: 2.5rem;
     }
 
-    .word chinese {
-        font-size: 1.5rem;
+    .chinese {
+        font-size: 1.75rem;
+        margin-top: 0.75rem;
     }
 
-    .nav-link{
+    .nav-link {
         font-size: 3rem;
     }
 }
@@ -979,8 +985,9 @@ timeline date::after {
         font-size: 1.5rem;
     }
 
-    .word chinese {
+    .chinese {
         font-size: 1rem;
+        margin-top: 0.25rem;
     }
 
     .landing-text h1 {

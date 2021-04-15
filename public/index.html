@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta property='og:title' content="My Portfolio"/>
     <meta property='og:image' content='resources/thumbnail.jpeg'/>
     <title>Brandon Wang</title>
@@ -18,6 +18,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyA7Dm_3kTmJgrI5ITIFXXigbh3wT23J_jg",
+        authDomain: "brandonwangg-f6d6d.firebaseapp.com",
+        databaseURL: "https://brandonwangg-f6d6d.firebaseio.com",
+        projectId: "brandonwangg-f6d6d",
+        storageBucket: "brandonwangg-f6d6d.appspot.com",
+        messagingSenderId: "511539689056",
+        appId: "1:511539689056:web:492957f5834a4b196db505",
+        measurementId: "G-9G18KZGRDN"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+</script>
 <img src=resources/site-bg.png style="display:none"/> <!--smoother page load-->
 <header>
     <div class="menu-toggler">
@@ -65,7 +89,7 @@
 <section class="about" id="about">
     <div class="container">
         <div class="profile-img" data-aos="fade-right" data-aos-delay="150" style="filter: drop-shadow(0 -2mm 5mm
-        rgb(62, 43, 72)); cursor: pointer;">
+        rgb(49,34,57)); cursor: pointer;">
             <img class="active" id="pfp1" src="resources/headshotv5.jpg" alt="">
             <img id="pfp2"
                  src="https://i.imgur.com/bn4YdEa.jpeg"
@@ -204,7 +228,26 @@
             <h1>projects</h1>
             <h6>collection of my recent projects and apps</h6>
         </div>
-
+        <div class="portfolio-item">
+            <div class="portfolio-description has-margin-right" data-aos="fade-right" data-aos-delay="150">
+                <h6>(WIP)</h6>
+                <h1>Graph Traversal Algorithm Visualizer</h1>
+                <p>This project aims to visualize the process of Djikstra's, A*, Prim's, Kruskal's, and other graph
+                    traversal algorithms for the purposes of pathfinding and identifying SPTs and MSTs.
+                    Developed with React.js. Currently at a JavaScript standard Dijkstra's implementation along with a
+                    pathfinding variant that implements a tree structure to return shortest traversed path. Utilizes the
+                    react-graph-vis, lodash, vis-data, vis-network packages from
+                    vis.js.</p>
+                <a href="https://github.com/brandon-m-wang/graph-algos-visualizer" target="_blank" class="cta">View
+                    repository</a>
+                <a
+                        href="https://brandonwan.gg/graph-vis"
+                        target="_blank" class="cta">View project</a>
+            </div>
+            <div class="portfolio-img" data-aos="fade-left" data-aos-delay="300">
+                <img src="resources/graph.png" alt="">
+            </div>
+        </div>
         <div class="portfolio-item">
             <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="300">
                 <img src="resources/contextr.png" alt="">
@@ -457,7 +500,12 @@
         <li style="font-size: 20px;
     padding: 3px;"></li>
         <li></li>
-        <li></li>
+        <li id="moosic" style="cursor: pointer; font-size: 2rem; user-select: none;">
+            <audio
+                    id="myAudio" src="resources/hotrod.mp3.mp3" preload="auto">
+            </audio>
+            click me - vibes only
+        </li>
     </ul>
 </div>
 
