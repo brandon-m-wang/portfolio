@@ -446,6 +446,10 @@ nav-link:focus {
   color: #24292e;
 }
 
+.fa-gitlab:hover {
+  color: #ca5100;
+}
+
 .fa-spotify:hover {
   color: #1db954;
 }
